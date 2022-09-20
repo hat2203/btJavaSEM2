@@ -5,6 +5,7 @@ import session1.Car;
 import java.security.PublicKey;
 
 public class Student {
+    // khai báo các thuộc tính
     public String name;
     public String tel;
     public String address;
@@ -13,10 +14,11 @@ public class Student {
     public Car myCar;
 
     public Student() {
-
+        // khởi tạo constructor mặc định
     }
 
     public Student(String name, String tel, String address, int age, Car myCar) {
+        // constructor có tham số
         this.name = name;
         this.tel = tel;
         this.address = address;
