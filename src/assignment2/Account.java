@@ -3,7 +3,7 @@ package assignment2;
 import java.util.Scanner;
 
 public class Account {
-    // khai báo thuocj tính
+    // khai bao thuoc tinh
     public String id;
     public String name;
     public int balance;
