@@ -1,62 +1,55 @@
 package assignment3;
 
 public class Customer {
-    double soluong;
-    double dongia;
-    double dinhmuc;
+    public int id;
+    public String fullName;
+    public String date;
+    public int quantity;
 
     public Customer() {
     }
 
-    public Customer(double sinhhoat, double kinhdoanh, double sanxuat) {
-        this.soluong = sinhhoat;
-        this.dongia = kinhdoanh;
-        this.dinhmuc = sanxuat;
+    public Customer(int id, String fullName, String date, int quantity) {
+        this.id = id;
+        this.fullName = fullName;
+        this.date = date;
+        this.quantity = quantity;
     }
 
-    public double getSoluong() {
-        return soluong;
+    public int getId() {
+        return id;
     }
 
-    public void setSoluong(double soluong) {
-        this.soluong = soluong;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public double getDongia() {
-        return dongia;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setDongia(double dongia) {
-        this.dongia = dongia;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
-    public double getDinhmuc() {
-        return dinhmuc;
+    public String getDate() {
+        return date;
     }
 
-    public void setDinhmuc(double dinhmuc) {
-        this.dinhmuc = dinhmuc;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public void thanhtien(double billing){
-        if (soluong<50){
-            dongia=1000;
-            billing=soluong*this.dongia;
-        } else if (50<soluong && soluong<100) {
-            double overUse;
-            overUse = soluong-dinhmuc;
-            dongia=1200;
-            billing=this.dongia*dinhmuc+overUse*dongia;
-        } else if (100<soluong && soluong<200) {
-            double overUse;
-            overUse = soluong-dinhmuc;
-            dongia=1500;
-            billing=this.dongia*dinhmuc+overUse*dongia;
-        } else if (soluong>200) {
-            double overUse;
-            overUse = soluong-dinhmuc;
-            dongia=2000;
-            billing=this.dongia*dinhmuc+overUse*dongia;
-        }
+    public int getQuantity() {
+        return quantity;
     }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public int thanhTien(){
+        return quantity*2000;
+    }
+
 }
