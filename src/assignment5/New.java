@@ -18,13 +18,13 @@ public class New implements INewInterface{
 
     }
 
-    public New(int ID, String title, String publishDate, String author, String content, float averageRate) {
+    public New(int ID, String title, String publishDate, String author, String content) {
         this.ID = ID;
         Title = title;
         PublishDate = publishDate;
         Author = author;
         Content = content;
-        AverageRate = averageRate;
+        AverageRate = 0 ;
         RateList = new int[3];
     }
 
@@ -83,25 +83,21 @@ public class New implements INewInterface{
     @Override
     public void Display() {
 
-        System.out.println(getTitle());
-        System.out.println(getPublishDate());
-        System.out.println(getAuthor());
-        System.out.println(getContent());
-        System.out.println(getAverageRate());
+        System.out.println(Title);
+        System.out.println(PublishDate);
+        System.out.println(Author);
+        System.out.println(Content);
+        System.out.println(AverageRate);
     }
 
-    public float Calculate(float averageRate){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("vui lòng nhập số nguyên: ");
-
-
-
-        int tong = 0;
-        for(int i=0; i<RateList.length;i++){
+    public New Calculate(){
+        float tong = 0;
+        for(int i : RateList){
             tong += i;
         }
-           averageRate = tong/RateList.length;
-        return averageRate ;
+        AverageRate = tong/3;
+        return this; // de tu dong chay ham Display
+        // muon lam duoc dieu nay thi ham phai tra ve mot doi tuong ma ham o tren co (ham nao o giua can chay ham tiep theo thi can return this)
     }
 
 }
