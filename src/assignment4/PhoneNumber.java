@@ -10,9 +10,11 @@ public class PhoneNumber {
      public PhoneNumber() {
      }
 
-     public PhoneNumber(String name, ArrayList<String> phone) {
+     public PhoneNumber(String name, String phone) {
           this.name = name;
-          this.phone = phone;
+          this.phone = new ArrayList<>();// chuyen array thanh chuoi
+          this.phone.add(phone);
+
      }
 
      public String getName() {
