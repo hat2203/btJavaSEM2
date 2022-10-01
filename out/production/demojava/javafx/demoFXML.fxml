@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.Controller">
+   <children>
+      <Text layoutX="115.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Họ và tên:" />
+      <Text layoutX="114.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" />
+      <Text layoutX="117.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuổi:" />
+      <Text layoutX="117.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ:" />
+      <TextField fx:id="txtFullName" layoutX="248.0" layoutY="57.0" promptText="Vui lòng nhập tên" />
+      <TextField fx:id="txtEmail" layoutX="248.0" layoutY="96.0" promptText="Email" />
+      <TextField fx:id="txtAge" layoutX="248.0" layoutY="174.0" promptText="Nhập địa chỉ" />
+      <TextField fx:id="txtAddress" layoutX="248.0" layoutY="137.0" promptText="Nhập số tuổi" />
+      <TextArea layoutX="80.0" layoutY="265.0" prefHeight="200.0" prefWidth="468.0" />
+      <Text layoutX="257.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nhập thông tin" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <Button layoutX="282.0" layoutY="214.0" mnemonicParsing="false" onAction="#ok" prefHeight="31.0" prefWidth="67.0" text="OK">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Text layoutX="206.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin sinh viên">
+         <font>
+            <Font name="Arial Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="114.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Họ và tên:" />
+      <Text layoutX="114.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" />
+      <Text layoutX="114.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuổi:" />
+      <Text layoutX="114.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ:" />
+      <Text fx:id="txtHoTen" layoutX="268.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="txtTuoi" layoutX="268.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="txtDiaChi" layoutX="268.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="txtMail" layoutX="268.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="noticeName" fill="RED" layoutX="254.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="noticeEmail" fill="RED" layoutX="254.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="noticeAge" fill="RED" layoutX="254.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="noticeAddress" fill="RED" layoutX="254.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+   </children>
+</Pane>

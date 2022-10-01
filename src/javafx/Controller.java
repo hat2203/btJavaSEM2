@@ -1,4 +1,62 @@
 package javafx;
 
+import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
+
 public class Controller {
+    public TextField txtFullName;
+    public TextField txtEmail;
+    public TextField txtAge;
+    public TextField txtAddress;
+
+
+    public Text txtHoTen;
+    public Text txtTuoi;
+    public Text txtDiaChi;
+    public Text txtMail;
+
+
+    public Text noticeName;
+    public Text noticeEmail;
+    public Text noticeAge;
+    public Text noticeAddress;
+
+
+    public void ok(){
+        String fn = txtFullName.getText();
+        if(fn.isEmpty()){
+            noticeName.setText("Vui lòng điền đủ họ tên");
+            noticeName.setVisible(true);
+        }else {
+            txtHoTen.setText(fn);
+        }
+
+        String em = txtEmail.getText();
+        if(em.isEmpty() ||!em.contains("@") || em.startsWith("@") || em.endsWith("@")){
+            noticeEmail.setText("Vui lòng nhập đúng email");
+            noticeEmail.setVisible(true);
+        }else {
+            txtMail.setText(em);
+        }
+
+        String ag = txtAge.getText();
+        try {
+            Integer nAge = Integer.parseInt(ag);
+            if(nAge < 0 || nAge>100)
+                throw new Exception("Vui lòng nhập tuổi hợp lệ");
+            txtTuoi.setText(ag);
+            noticeAge.setVisible(true);
+        }catch (Exception e){
+            noticeAge.setText(e.getMessage());
+            noticeAge.setVisible(false);
+        }
+
+        String ad = txtAddress.getText();
+        if (ad.isEmpty()){
+            noticeAddress.setText("Vui lòng nhập địa chỉ");
+            noticeAddress.setVisible(true);
+        }else {
+            txtDiaChi.setText(ad);
+        }
+    }
 }
