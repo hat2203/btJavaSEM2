@@ -1,14 +1,16 @@
 package javafx;
 
+import assignment5.INewInterface;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+
+import java.util.ArrayList;
 
 public class Controller {
     public TextField txtFullName;
     public TextField txtEmail;
     public TextField txtAge;
     public TextField txtAddress;
-
 
     public Text txtHoTen;
     public Text txtTuoi;
@@ -20,6 +22,17 @@ public class Controller {
     public Text noticeEmail;
     public Text noticeAge;
     public Text noticeAddress;
+
+
+    public TextField txtName;
+    public TextField txtNumber;
+
+    public Text txtTen;
+    public Text txtSo;
+
+    public Text checkTen;
+    public Text checkSo;
+
 
 
     public void ok(){
@@ -58,5 +71,26 @@ public class Controller {
         }else {
             txtDiaChi.setText(ad);
         }
+    }
+
+    public void taoMoi(){
+        String t = txtName.getText();
+        txtTen.setText(t);
+//        if(t.isEmpty()){
+//            checkTen.setText("Vui lòng nhập tên");
+//            checkTen.setVisible(false);
+//        }else {
+//
+//        }
+        String n = txtNumber.getText();
+        txtSo.setText(n);
+//        if(n.isEmpty()){
+//            checkSo.setText("Vui lòng nhập SĐT");
+//            checkSo.setVisible(false);
+//        }else{
+//
+//        }
+
+
     }
 }
