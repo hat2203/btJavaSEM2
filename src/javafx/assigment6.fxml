@@ -21,7 +21,7 @@
                 <Font name="Arial Bold Italic" size="24.0" />
             </font>
         </Text>
-        <Button layoutX="282.0" layoutY="214.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="67.0" text="OK">
+        <Button onAction="#ok" layoutX="282.0" layoutY="214.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="67.0" text="OK">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font>

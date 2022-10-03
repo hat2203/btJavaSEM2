@@ -75,21 +75,22 @@ public class Controller {
 
     public void taoMoi(){
         String t = txtName.getText();
-        txtTen.setText(t);
-//        if(t.isEmpty()){
-//            checkTen.setText("Vui lòng nhập tên");
-//            checkTen.setVisible(false);
-//        }else {
-//
-//        }
+
+        if(t.isEmpty()){
+            checkTen.setText("Vui lòng nhập tên");
+            checkTen.setVisible(false);
+        }else {
+          txtTen.setText(t);
+        }
+
+
         String n = txtNumber.getText();
-        txtSo.setText(n);
-//        if(n.isEmpty()){
-//            checkSo.setText("Vui lòng nhập SĐT");
-//            checkSo.setVisible(false);
-//        }else{
-//
-//        }
+        if(n.isEmpty()){
+            checkSo.setText("Vui lòng nhập SĐT");
+            checkSo.setVisible(false);
+        }else{
+          txtSo.setText(n);
+        }
 
 
     }
