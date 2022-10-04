@@ -1,6 +1,10 @@
 package javafx;
 
 import assignment5.INewInterface;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
@@ -26,12 +30,55 @@ public class Controller {
 
     public TextField txtName;
     public TextField txtNumber;
-
-    public Text txtTen;
-    public Text txtSo;
-
+    public ListView<PhoneNumber> lv;
     public Text checkTen;
     public Text checkSo;
+    private ObservableList<PhoneNumber> numberList = FXCollections.observableArrayList();
+
+
+    public void taoMoi(){
+        try{
+            checkTen.setVisible(false);
+            checkSo.setVisible(false);
+            if(txtName.getText().isEmpty()){
+                throw new Exception("Vui lòng nhập đầy đủ tên ");
+            }
+            if(txtNumber.getText().isEmpty()){
+                throw new Exception("Vui lòng điền SĐT");
+            }
+ //           numberList.add(new PhoneNumber(txtName.getText(),txtNumber.getText()));
+
+//            String n = txtName.getText();
+//            String p = txtNumber.getText();
+//            PhoneNumber pn = new PhoneNumber(n,p);
+//            numberList.add(pn);
+
+            //in mảng
+            printfPhoneList();
+            updatePhone();
+
+        }catch (Exception e){
+            checkTen.setText(e.getMessage());
+            checkTen.setVisible(true);
+            checkSo.setText(e.getMessage());
+            checkSo.setVisible(true);
+        }
+    }
+
+    public void printfPhoneList(){
+        lv.setItems(numberList);
+        lv.refresh();
+    }
+    public void updatePhone(){
+        for(PhoneNumber p : numberList){
+            if(p.getName().equals(txtName.getText())){
+                    p.setPhone(txtNumber.getText());
+                    return;
+            }
+        }
+        numberList.add(new PhoneNumber(txtName.getText(),txtNumber.getText()));
+    }
+
 
 
 
@@ -73,25 +120,5 @@ public class Controller {
         }
     }
 
-    public void taoMoi(){
-        String t = txtName.getText();
 
-        if(t.isEmpty()){
-            checkTen.setText("Vui lòng nhập tên");
-            checkTen.setVisible(false);
-        }else {
-          txtTen.setText(t);
-        }
-
-
-        String n = txtNumber.getText();
-        if(n.isEmpty()){
-            checkSo.setText("Vui lòng nhập SĐT");
-            checkSo.setVisible(false);
-        }else{
-          txtSo.setText(n);
-        }
-
-
-    }
 }
