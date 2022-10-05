@@ -3,14 +3,17 @@ package javafx;
 import assignment5.INewInterface;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
-public class Controller {
+public class Controller implements Initializable {
     public TextField txtFullName;
     public TextField txtEmail;
     public TextField txtAge;
@@ -35,6 +38,10 @@ public class Controller {
     public Text checkSo;
     private ObservableList<PhoneNumber> numberList = FXCollections.observableArrayList();
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
 
     public void taoMoi(){
         try{

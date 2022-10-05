@@ -1,4 +1,4 @@
-package assignment8;
+package multipage;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,11 +7,11 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-// đặt một cái biến
-
+    public static Stage rootStage; //là một ô nhớ chạy độc lập, static là biến mặc định có ô nhớ
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("assignment8.fxml"));
+        rootStage = primaryStage;
+        Parent root = FXMLLoader.load(getClass().getResource("list/subject.fxml"));
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();

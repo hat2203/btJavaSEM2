@@ -1,15 +1,15 @@
 package assignment8;
 
 public class StudentList {
-    public String sName;
-    public String sEmail;
-    public String sMark;
+     String sName;
+     String sEmail;
+     Integer sMark;
 
     public StudentList() {
 
     }
 
-    public StudentList(String sName, String sEmail, String sMark) {
+    public StudentList(String sName, String sEmail, Integer sMark) {
         this.sName = sName;
         this.sEmail = sEmail;
         this.sMark = sMark;
@@ -31,11 +31,11 @@ public class StudentList {
         this.sEmail = sEmail;
     }
 
-    public String getsMark() {
+    public Integer getsMark() {
         return sMark;
     }
 
-    public void setsMark(String sMark) {
+    public void setsMark(Integer sMark) {
         this.sMark = sMark;
     }
 
