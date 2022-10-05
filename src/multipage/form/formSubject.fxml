@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="multipage.form.Controller">
+   <children>
+      <Button layoutX="28.0" layoutY="22.0" mnemonicParsing="false" onAction="#backToList" prefHeight="31.0" prefWidth="145.0" text="&lt;&lt;Back to list" />
+      <TextField fx:id="sID" layoutX="113.0" layoutY="78.0" prefHeight="31.0" prefWidth="420.0" promptText="Code" />
+      <TextField fx:id="sName" layoutX="113.0" layoutY="151.0" prefHeight="31.0" prefWidth="420.0" promptText="Name" />
+      <TextField fx:id="sHour" layoutX="113.0" layoutY="219.0" prefHeight="31.0" prefWidth="420.0" promptText="Hour" />
+      <Button layoutX="450.0" layoutY="276.0" mnemonicParsing="false" onAction="#submit" prefHeight="31.0" prefWidth="83.0" text="Submit" />
+      <Text fx:id="checkID" fill="RED" layoutX="113.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="checkName" fill="RED" layoutX="113.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="checkHour" fill="RED" layoutX="113.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+   </children>
+</Pane>
